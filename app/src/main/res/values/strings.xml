@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">GREPE</string>
+    <string name="hint_userID1">Insira sua matrícula</string>
+    <string name="hint_userID2">Insira somente números</string>
+    <string name="btn_OK">REGISTRAR</string>
+    <string name="hint_Name">Nome do servidor</string>
+    <string name="hint_Setor">Setor</string>
+    <string name="hint_Funcao">Função</string>
+    <string name="hint_Data">Data</string>
+    <string name="hint_Hora">Hora</string>
+    <string name="hint_Reset">Resetar informações</string>
+</resources>
