@@ -31,3 +31,5 @@ pode referenciar qualquer view do projeto da seguinte forma:
 
   binding.textViewNomeDoServidor.setText("Fulano de tal")
   binding.editTextMatricula.text.toString()
+
+Ou seja, através do binding é possível manupular qualquer view de forma mais intuitiva.
