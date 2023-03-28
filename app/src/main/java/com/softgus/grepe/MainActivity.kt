@@ -29,11 +29,11 @@ class MainActivity : AppCompatActivity() {
 
     private fun queryPerson (key: String) {
         if(key == "123") {
-            binding.textViewNomeServidor.setText("Alexsandro de Lima Costa")
+            binding.textViewNomeServidor.setText("Alex Lima")
             binding.textViewSetor.setText("CGPA | CTI")
             binding.textViewFuncao.setText("Supervisor")
         } else {
-            binding.textViewNomeServidor.setText("Guilherme Lacerda de Lima Costa")
+            binding.textViewNomeServidor.setText("Fulano de tal")
             binding.textViewSetor.setText("CGPA | CTI")
             binding.textViewFuncao.setText("Aprendiz")
         }
