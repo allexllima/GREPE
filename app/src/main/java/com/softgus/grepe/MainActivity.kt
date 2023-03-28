@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
         } else {
             binding.textViewNomeServidor.setText("Fulano de tal")
             binding.textViewSetor.setText("CGPA | CTI")
-            binding.textViewFuncao.setText("Aprendiz")
+            binding.textViewFuncao.setText("Técnico em TI")
         }
     }
 
