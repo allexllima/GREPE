@@ -16,7 +16,7 @@ pode referenciar qualquer view do projeto da seguinte forma:
   }
 - Logo após, sincronizamos esta modificação para atualizar as funções do projeto.
   Para isto, com o Android Studio, apenas cliquei em qualquer parte do código do trecho que inseri acima, 
-  uma lampada apareceu e, ao clicar nela, apareceu a opção "Sync now". Depois de sincronizar, a função inicial da MainActivity editei para ficar assim:
+  uma lampada apareceu e, ao clicar nela, apareceu a opção "Sync now". Depois de sincronizar, a função inicial da MainActivity, editei para ficar assim:
   
   private lateinit var binding: ActivityMainBinding      // Referência inicial
   
