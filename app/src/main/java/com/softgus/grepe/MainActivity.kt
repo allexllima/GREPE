@@ -1,11 +1,14 @@
 package com.softgus.grepe
 
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.softgus.grepe.config.MySQLConnector
 import com.softgus.grepe.databinding.ActivityMainBinding
 import java.time.LocalDateTime
+import com.softgus.grepe.dao.Person
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -18,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(view)
     }
 
-    fun pointerRegister(view: View) {
+    fun pointRegister(view: View) {
         val date = LocalDateTime.now()
         queryPerson(binding.editTextMatriculaCPF.text.toString())
         binding.editTextMatriculaCPF.setText("")
@@ -33,6 +36,20 @@ class MainActivity : AppCompatActivity() {
             binding.textViewSetor.setText("CGPA | CTI")
             binding.textViewFuncao.setText("Supervisor")
         } else {
+            val person = Person()
+            println("Usuários: ${person.getUsers()}")
+            println("Estamos na MainActivity")
+            /*val temp = ArrayList(person?.queryPerson("3025136"))
+            if(!temp.isEmpty()) {
+                println(temp.get(1).toString());
+                println(temp.get(2).toString());
+                println(temp.get(3).toString().substring(temp.get(3).toString().indexOf('/') + 2));
+            }*/
+            //val users = Person().getUsers()
+            /*for (user in users) {
+                //println("USUÁRIO", "${user}")
+                Log.d("USUÁRIO", "${user}")
+            }*/
             binding.textViewNomeServidor.setText("Fulano de tal")
             binding.textViewSetor.setText("CGPA | CTI")
             binding.textViewFuncao.setText("Técnico em TI")
