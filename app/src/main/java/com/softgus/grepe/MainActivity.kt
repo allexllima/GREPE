@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
             binding.textViewSetor.setText("CGPA | CTI")
             binding.textViewFuncao.setText("Supervisor")
         } else {
-            val person = Person()
+            val person = Person("456", "qwer")
             println("Usuários: ${person.getUsers()}")
             println("Estamos na MainActivity")
             /*val temp = ArrayList(person?.queryPerson("3025136"))

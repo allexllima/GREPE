@@ -11,9 +11,21 @@ class Person {
     private lateinit var conn: Connection
     private lateinit var stm: Statement
 
-    /*constructor(id: String, name: String) {
+    private lateinit var id: String
+    private lateinit var name: String
 
-    }*/
+    constructor(id: String, name: String) {
+        this.id = id
+        this.name = name
+    }
+
+    fun getId(): String {
+        return id
+    }
+
+    fun getName(): String {
+        return name
+    }
 
     /*@Throws(SQLException::class, ClassNotFoundException::class)
     constructor() {
@@ -29,17 +41,18 @@ class Person {
 
     fun getUsers(): List<Person> {
         val connection = MySQLConnector().getConnection()
-        val query = "SELECT * FROM funcionarios"
+        val query = "SELECT * FROM user"
         val resultSet = connection?.createStatement()?.executeQuery(query)
+        println(resultSet)
         val users = mutableListOf<Person>()
         while (resultSet?.next() == true) {
             val id = resultSet.getString("matricula")
-            val nome = resultSet.getString("nome")
-            val usuario = Person()
+            val name = resultSet.getString("nome")
+            val usuario = Person(id, name)
             users.add(usuario)
         }
         connection?.close()
-        println("Usuários: ${users.get(0).toString()} - ${users.get(1).toString()}")
+        //println("Usuários: ${users.get(0).toString()} - ${users.get(1).toString()}")
         return users
     }
 
